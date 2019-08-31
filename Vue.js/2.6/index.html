@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<script src="https://unpkg.com/vue@2.5.17"></script>
+
+<button id="b-button" v-bind:title="loggedInButton" v-bind:disabled="!canBuy">購入</button>
+
+<script>
+  let vm = new Vue({
+    el: "#b-button",
+    data: {
+      loggedInButton: "ログイン済みのため購入できます。",
+      canBuy: false
+    }
+  });
+</script>
