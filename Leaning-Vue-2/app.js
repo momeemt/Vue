@@ -19,7 +19,9 @@ let items = [
 let vm = new Vue({
   el: '#app',
   data: {
-    items: items
+    items: items,
+    loggedInButton: 'ログイン済のため購入できます。',
+    canBuy: false
   }
 });
 
