@@ -22,6 +22,14 @@ let vm = new Vue({
     items: items,
     loggedInButton: 'ログイン済のため購入できます。',
     canBuy: false
+  },
+  filters: {
+    numberWithDelimiter: function (value) {
+      if (!value) {
+        return '0'
+      }
+      return value.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1, ')
+    }
   }
 });
 
