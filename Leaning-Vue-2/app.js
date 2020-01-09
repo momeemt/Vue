@@ -21,7 +21,6 @@ let vm = new Vue({
   data: {
     items: items,
     loggedInButton: 'ログイン済のため購入できます。',
-    canBuy: false
   },
   filters: {
     numberWithDelimiter: function (value) {
@@ -39,6 +38,9 @@ let vm = new Vue({
     },
     totalPriceWWithTax: function () {
       return Math.floor(this.totalPrice * 1.08)
+    },
+    canBuy: function () {
+      return this.totalPrice >= 1000
     }
   }
 });

@@ -3,14 +3,13 @@
 <script src="https://unpkg.com/vue@2.5.17"></script>
 
 <div id="app">
-  <p>フィルタ処理例 {{ 1000 | numberWithDelimiter }}</p>
-  <button v-bind:title="loggedInButton" v-bind:disabled="!canBuy">購入</button>
-  <p>合計: {{ totalPrice }}</p>
-
   <!-- サンプルアプリケーション実装 -->
   <p>{{ items[0].name }}: {{ items[0].price }} x {{ items[0].quantity }}</p>
   <p>小計: {{ totalPrice | numberWithDelimiter }}円</p>
   <p>合計(税込): {{ totalPriceWithTax | numberWithDelimiter }}円</p>
+  <p v-show="!canBuy">
+    {{ 1000 | numberWithDelimiter }}円以上からご購入頂けます
+  </p>
 </div>
 
 <script src="app.js"></script>
