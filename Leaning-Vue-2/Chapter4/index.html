@@ -8,11 +8,15 @@
   </head>
   <body>
     <div id="app">
-      <router-link to="/top">トップページ</router-link>
-      <router-link to="/users">ユーザー一覧ページ</router-link>
-      <router-link :to="{ name: 'user', params: { userId: 'momeemt'}}">ユーザー詳細ページ</router-link>
+      <nav>
+        <router-link to="/top">トップページ</router-link>
+        <router-link to="/users">ユーザー一覧ページ</router-link>
+      </nav>
       <router-view></router-view>
     </div>
   </body>
   <script src="app.js"></script>
+  <script type="text/x-template" id="user-list">
+    <div>ユーザー一覧ページです。</div>
+  </script>
 </html>

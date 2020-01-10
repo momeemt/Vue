@@ -1,3 +1,7 @@
+let UserList = {
+  template: '#user-list'
+}
+
 let router = new VueRouter({
   routes: [
     {
@@ -8,16 +12,7 @@ let router = new VueRouter({
     },
     {
       path: '/users',
-      component: {
-        template: '<div>ユーザー一覧ページです</div>'
-      }
-    },
-    {
-      path: '/user/:userId',
-      name: 'user',
-      component: {
-        template: '<div>ユーザーIDは {{ $route.params.userId }} です。</div>'
-      }
+      component: UserList
     }
   ]
 })
