@@ -10,6 +10,7 @@
     <div id="app">
       <router-link to="/top">トップページ</router-link>
       <router-link to="/users">ユーザー一覧ページ</router-link>
+      <router-link :to="{ name: 'user', params: { userId: 'momeemt'}}">ユーザー詳細ページ</router-link>
       <router-view></router-view>
     </div>
   </body>

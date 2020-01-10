@@ -14,6 +14,7 @@ let router = new VueRouter({
     },
     {
       path: '/user/:userId',
+      name: 'user',
       component: {
         template: '<div>ユーザーIDは {{ $route.params.userId }} です。</div>'
       }
