@@ -6,6 +6,13 @@
   <item-desc v-bind:item-name='myItem'></item-desc>
 </div>
 
+<div id="fruits-counter">
+  <div v-for="fruit in fruits">
+    {{fruit.name}}: <counter-button v-on:increment="incrementCartStatus()"></counter-button>
+  </div>
+  <p>合計: {{total}}</p>
+</div>
+
 <div id="fruits-list">
   <fruits-list-title></fruits-list-title>
   <fruits-list-description></fruits-list-description>
