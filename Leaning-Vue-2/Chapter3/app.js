@@ -1,3 +1,23 @@
+let headerTemplate = `
+  <div>
+    <slot name="header">No title</slot>
+  </div>
+`
+
+let contentTemplate = `
+  <div>
+    <slot name="content">No contents</slot>
+  </div>
+`
+
+Vue.component('page-header', {
+  template: headerTemplate
+})
+
+Vue.component('page-content', {
+  template: contentTemplate
+})
+
 let counterButton = Vue.extend({
   template: '<span>{{counter}}個<button v-on:click="addToCart">追加</button></span>',
   data: function() {
