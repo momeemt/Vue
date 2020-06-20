@@ -18,6 +18,9 @@ module.exports = function karmaConfig (config) {
       '../../node_modules/es6-promise/dist/es6-promise.auto.js',
       './index.js'
     ],
+    plugins: [
+      'karma-mocha'
+    ],
     // preprocessors: {
     //   './index.js': ['webpack', 'sourcemap']
     // },
